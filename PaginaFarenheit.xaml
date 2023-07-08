@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_412_1P_PR02.PaginaFarenheit"
+             Title="PaginaFarenheit"
+             >
+    <Grid ColumnDefinitions=".33*, .33*, .33*" RowDefinitions=".25*, .15*, .16*, .16*, .16*">
+
+            <Label
+                FontSize="32"
+                SemanticProperties.HeadingLevel="Level1"
+                TextColor="#0A072B"
+                FontAttributes="Bold"
+
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+
+                Grid.Row="0"
+                Grid.ColumnSpan="3"
+                >Conversión a Fahrenheit
+            </Label>
+
+            <Label
+                FontSize="24"
+                SemanticProperties.HeadingLevel="Level2"
+                TextColor="#0A072B"
+                FontAttributes="Bold"
+
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+
+                Grid.Row="1"
+                Grid.Column="1"
+                >Ingresa un valor
+            </Label>
+
+            <Label
+                x:Name="lblF"
+                FontSize="24"
+                SemanticProperties.HeadingLevel="Level2"
+                TextColor="#0A072B"
+                FontAttributes="Bold"
+
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">:) °F
+            </Label>
+
+            <Button
+                    x:Name="kelvinToFarenheitBtn"
+                    CornerRadius="300"
+                    Margin="5"
+
+                    VerticalOptions="Start"
+
+                    Grid.Row="2"
+                    Grid.RowSpan="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="1"
+
+                    ImageSource="left.png"
+                    Clicked="kelvinToFarenheitBtn_Clicked"
+                    />
+            <Entry
+                    x:Name="farenheitEntry"
+                    Placeholder="Ingresa solo el número"
+                    PlaceholderColor="#2B3233"
+                    FontSize="16"
+                    SemanticProperties.Hint="input de k a f"
+                    Margin="25"
+                    BackgroundColor="#5FAAED"
+
+                    VerticalOptions="Start"
+
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="1"
+                    Grid.RowSpan="1"
+                    />
+            
+            <Image
+                Source="deco2.png"
+                SemanticProperties.Description="deco image"
+                HeightRequest="200"
+
+                HorizontalOptions="Center"
+                VerticalOptions="Start"
+
+                Grid.Row="3"
+                Grid.RowSpan="2"
+                Grid.Column="1"/>
+        </Grid>
+</ContentPage>

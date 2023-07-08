@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_412_1P_PR02.PaginaTab"
+             Title="Holis"
+            BarBackgroundColor="#0A072B" AnchorX="0">
+    <ContentPage Title="Bienvenida" IconImageSource="welcome.png">
+
+        <ScrollView>
+            <VerticalStackLayout
+                Spacing="25"
+                Padding="30,0"
+                VerticalOptions="Center">
+
+                 <Image
+                    Source="clima.png"
+                    SemanticProperties.Description="Cute weather image"
+                    HeightRequest="200"
+                    HorizontalOptions="Center" />
+
+                <Label
+                    Text="Conversión de grados"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="32"
+                    HorizontalOptions="Center" />
+
+                <Label
+                    Text="Bienvenide a el mejor convertidor de grados"
+                    SemanticProperties.HeadingLevel="Level2"
+                    SemanticProperties.Description="Bienvenide a el mejor convertidor de grados"
+                    FontSize="18"
+                    HorizontalOptions="Center" />
+
+                <Button
+                    x:Name="comenzarBtn"
+                    Text=":)"
+                    SemanticProperties.Hint="Nos lleva a la página de conversiones"
+                    HorizontalOptions="Center"
+                    Clicked="comenzarBtn_Clicked"/>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+    </ContentPage>
+    <ContentPage Title="Calcular" IconImageSource="convert.png">
+        <Grid ColumnDefinitions=".33*, .33*, .33*" RowDefinitions=".25*, .25*, .25*, .25*">
+            <Label
+                FontSize="32"
+                SemanticProperties.HeadingLevel="Level1"
+                TextColor="#0A072B"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Grid.Row="0"
+                Grid.ColumnSpan="3">Conversión de temperatura
+            </Label>
+            <Label
+                FontSize="24"
+                SemanticProperties.HeadingLevel="Level2"
+                TextColor="#0A072B"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Row="1"
+                Grid.ColumnSpan="3">Selecciona una opción
+            </Label>
+            <Button
+                    x:Name="farenheitBtn"
+                    Text="FARENHEIT"
+                    FontSize="24"
+                    SemanticProperties.Hint="Nos lleva a F"
+                    CornerRadius="360"
+                    Grid.Row="2"
+                    Grid.RowSpan="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="1"
+                    Clicked="farenheitBtn_Clicked"/>
+            <Image
+                    Source="lupa.png"
+                    SemanticProperties.Description="Cute lupa image"
+                    HeightRequest="200"
+                    HorizontalOptions="Center"
+                    Grid.Row="2"
+                    Grid.RowSpan="2"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="1" />
+            <Button
+                    x:Name="kelvinBtn"
+                    Text="KELVIN"
+                    FontSize="24"
+                    SemanticProperties.Hint="Nos lleva a K"
+                    CornerRadius="360"
+                    Grid.Row="2"
+                    Grid.RowSpan="2"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="1"
+                    Clicked="kelvinBtn_Clicked"/>
+        </Grid>
+        
+    </ContentPage>
+    
+</TabbedPage>
